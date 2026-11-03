@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+
+  <title>Carne Cordilleras | Con sabor a carne</title>
+
+  <meta name="description" content="Carne Cordilleras. Calidad desde el origen, sabor y confianza en cada corte. Conoce nuestra filosofía, proceso y productos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #090909;
+      --dark: #151515;
+      --charcoal: #242424;
+      --gold: #D4AF37;
+      --gold-light: #E8CF83;
+      --ivory: #F5F2E9;
+      --white: #FFFFFF;
+      --muted: #B7B3AA;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Montserrat', Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--ivory);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(38px, 5vw, 58px);
+      font-weight: 500;
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 650px;
+      line-height: 2;
+    }
+
+    .gold-line {
+      width: 58px;
+      height: 2px;
+      background: var(--gold);
+      margin: 25px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-filled {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-filled:hover {
+      background: var(--gold-light);
+    }
+
+    /* NAVEGACIÓN */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9, 9, 9, .96);
+      border-bottom: 1px solid rgba(212, 175, 55, .2);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .brand-tagline {
+      color: var(--gold);
+      font-size: 8px;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .nav-links a {
+      color: #DDD8CD;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* PORTADA */
+
+    .hero {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.78) 48%, rgba(0,0,0,.3) 100%),
+        url("https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=2000&q=85") center/cover;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(55px, 8vw, 94px);
+      font-weight: 500;
+      line-height: .98;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-description {
+      max-width: 500px;
+      color: #D0CCC4;
+      font-size: 14px;
+      line-height: 2;
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 25px;
+      right: 5%;
+      color: rgba(255,255,255,.55);
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* FILOSOFÍA */
+
+    .philosophy {
+      padding: 115px 0;
+      background: var(--ivory);
+      color: var(--black);
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .philosophy .section-text {
+      color: #55514A;
+    }
+
+    .philosophy-quote {
+      border-left: 2px solid var(--gold);
+      padding: 12px 0 12px 25px;
+      font-family: var(--serif);
+      font-size: 30px;
+      line-height: 1.35;
+      margin-top: 30px;
+    }
+
+    .philosophy-image {
+      min-height: 440px;
+      background:
+        linear-gradient(0deg, rgba(0,0,0,.15), transparent),
+        url("https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=1100&q=85") center/cover;
+      position: relative;
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      background: var(--black);
+      padding: 15px 20px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* CALIDAD */
+
+    .quality {
+      padding: 110px 0;
+      background: var(--dark);
+    }
+
+    .quality-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .quality-heading .section-text {
+      margin: auto;
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .quality-card {
+      padding: 35px 28px;
+      border: 1px solid rgba(212,175,55,.25);
+      background: rgba(255,255,255,.015);
+    }
+
+    .quality-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .quality-card h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .quality-card p {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    /* PRODUCTOS */
+
+    .products {
+      padding: 110px 0;
+      background: var(--black);
+    }
+
+    .products-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      min-height: 410px;
+      position: relative;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .product-card img {
+      height: 100%;
+      min-height: 410px;
+      object-fit: cover;
+      transition: transform .6s;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .product-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 30px;
+      background: linear-gradient(0deg, rgba(0,0,0,.94), transparent 75%);
+    }
+
+    .product-overlay .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .product-overlay h3 {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    .product-overlay p {
+      color: #D1CCC2;
+      font-size: 11px;
+      margin-top: 8px;
+      line-height: 1.8;
+    }
+
+    /* PROCESO */
+
+    .process {
+      padding: 110px 0;
+      background: var(--ivory);
+      color: var(--black);
+    }
+
+    .process-heading {
+      text-align: center;
+      margin-bottom: 65px;
+    }
+
+    .process-heading .section-text {
+      margin: auto;
+      color: #625E56;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .process-step {
+      border-top: 2px solid var(--gold);
+      padding-top: 25px;
+    }
+
+    .process-step span {
+      color: #A98A2C;
+      font-family: var(--serif);
+      font-size: 44px;
+    }
+
+    .process-step h3 {
+      font-family: var(--serif);
+      font-size: 27px;
+      margin: 10px 0;
+    }
+
+    .process-step p {
+      color: #625E56;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    /* TRAZABILIDAD */
+
+    .traceability {
+      padding: 110px 0;
+      background:
+        linear-gradient(rgba(0,0,0,.87), rgba(0,0,0,.92)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85") center/cover;
+      text-align: center;
+    }
+
+    .traceability .section-text {
+      margin: 0 auto 30px;
+    }
+
+    .trace-points {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 35px 0;
+    }
+
+    .trace-points span {
+      border: 1px solid rgba(212,175,55,.55);
+      padding: 12px 18px;
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      padding: 95px 0;
+      background: var(--dark);
+      text-align: center;
+    }
+
+    .contact .section-text {
+      margin: 0 auto 30px;
+    }
+
+    .contact-note {
+      color: #8F8A80;
+      font-size: 11px;
+      margin-top: 22px;
+    }
+
+    /* PIE DE PÁGINA */
+
+    footer {
+      padding: 35px 0;
+      background: #050505;
+      border-top: 1px solid rgba(212,175,55,.2);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-copy {
+      color: #858078;
+      font-size: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--gold);
+      font-size: 10px;
+    }
+
+    /* ADAPTACIÓN A CELULARES */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+      }
+
+      .philosophy-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: #101010;
+        border-bottom: 1px solid rgba(212,175,55,.3);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 590px;
+        background-position: 60% center;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .philosophy,
+      .quality,
+      .products,
+      .process,
+      .traceability {
+        padding: 80px 0;
+      }
+
+      .philosophy-grid,
+      .quality-grid,
+      .products-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .philosophy-image {
+        min-height: 330px;
+      }
+
+      .quality-grid {
+        gap: 18px;
+      }
+
+      .products-heading {
+        display: block;
+      }
+
+      .products-heading .btn {
+        margin-top: 20px;
+      }
+
+      .product-card,
+      .product-card img {
+        min-height: 350px;
+      }
+
+      .hero-bottom {
+        display: none;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="container navbar">
+
+      <a class="brand" href="#inicio" aria-label="Carne Cordilleras, inicio">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 78 L12 47 L31 27 L48 43 L65 18 L88 43 L88 78 Z"
+                stroke="currentColor" stroke-width="3"/>
+          <path d="M12 78 H88" stroke="currentColor" stroke-width="3"/>
+          <path d="M29 78 L29 58 L50 45 L71 58 L71 78"
+                stroke="currentColor" stroke-width="3"/>
+          <path d="M40 59 L50 53 L60 59" stroke="currentColor" stroke-width="2"/>
+        </svg>
+
+        <div>
+          <div class="brand-name">CARNE CORDILLERAS</div>
+          <div class="brand-tagline">CON SABOR A CARNE</div>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#filosofia">Nosotros</a>
+        <a href="#calidad">Calidad</a>
+        <a href="#productos">Productos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#trazabilidad">Confianza</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">Calidad que nace desde el origen</div>
+
+          <h1>
+            La calidad<br>
+            no se improvisa.<br>
+            <span>Se construye.</span>
+          </h1>
+
+          <p class="hero-description">
+            En Carne Cordilleras creemos que una gran experiencia
+            comienza mucho antes de llegar a tu mesa. Selección,
+            cuidado y atención en cada etapa para disfrutar el
+            verdadero sabor de la carne.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-filled" href="#filosofia">Conoce nuestra filosofía</a>
+            <a class="btn" href="#productos">Descubre nuestros productos</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-bottom">Calidad · Origen · Confianza</div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section class="philosophy" id="filosofia">
+      <div class="container philosophy-grid">
+
+        <div>
+          <div class="eyebrow">Nuestra filosofía</div>
+
+          <h2 class="section-title">
+            La calidad comienza mucho antes de llegar a tu <span>mesa.</span>
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-text">
+            En Carne Cordilleras entendemos que la calidad de la carne
+            no depende únicamente del corte o de su presentación.
+            Es el resultado de decisiones y cuidados que comienzan
+            desde el origen y continúan a lo largo de todo el proceso.
+          </p>
+
+          <p class="section-text" style="margin-top:18px;">
+            Buscamos ofrecer una experiencia que reúna sabor,
+            calidad y confianza, porque creemos que compartir
+            buenos alimentos también significa compartir buenos momentos.
+          </p>
+
+          <div class="philosophy-quote">
+            "La calidad no se improvisa. Se construye desde el origen".
+          </div>
+        </div>
+
+        <div class="philosophy-image">
+          <div class="image-caption">El origen hace la diferencia</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALIDAD -->
+    <section class="quality" id="calidad">
+      <div class="container">
+
+        <div class="quality-heading">
+          <div class="eyebrow">Nuestro compromiso</div>
+          <h2 class="section-title">
+            Lo que distingue nuestra <span>carne</span>
+          </h2>
+          <p class="section-text">
+            Trabajamos con una visión integral de calidad:
+            cuidar cada etapa para ofrecer productos que
+            merezcan un lugar en tu mesa.
+          </p>
+        </div>
+
+        <div class="quality-grid">
+
+          <article class="quality-card">
+            <div class="quality-number">01</div>
+            <h3>Selección desde el origen</h3>
+            <p>
+              La calidad comienza con la selección del ganado,
+              considerando características, genética y condiciones
+              de desarrollo.
+            </p>
+          </article>
+
+          <article class="quality-card">
+            <div class="quality-number">02</div>
+            <h3>Nutrición y cuidado</h3>
+            <p>
+              La alimentación y el manejo forman parte de un proceso
+              orientado al desarrollo adecuado de los animales
+              y a las características de la carne.
+            </p>
+          </article>
+
+          <article class="quality-card">
+            <div class="quality-number">03</div>
+            <h3>Proceso y conservación</h3>
+            <p>
+              Cuidamos la transformación, el manejo, el empaque
+              y la conservación de nuestros productos para
+              mantener su calidad.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="products" id="productos">
+      <div class="container">
+
+        <div class="products-heading">
+          <div>
+            <div class="eyebrow">Nuestra selección</div>
+            <h2 class="section-title">
+              Carne para cada <span>ocasión.</span>
+            </h2>
+            <p class="section-text">
+              Diferentes opciones para disfrutar en la parrilla,
+              preparar tus comidas favoritas o compartir
+              alimentos listos para disfrutar.
+            </p>
+          </div>
+
+          <a class="btn" href="#contacto">Conoce nuestra propuesta</a>
+        </div>
+
+        <div class="products-grid">
+
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+              alt="Cortes de carne preparados para parrilla"
+              loading="lazy">
+
+            <div class="product-overlay">
+              <div class="eyebrow">01 · Parrilla</div>
+              <h3>El placer de asar</h3>
+              <p>
+                Cortes seleccionados para disfrutar el fuego,
+                el sabor y los buenos momentos.
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=85"
+              alt="Carne de res para cocinar"
+              loading="lazy">
+
+            <div class="product-overlay">
+              <div class="eyebrow">02 · Cocina</div>
+              <h3>El sabor de cada día</h3>
+              <p>
+                Opciones para preparar en casa y disfrutar
+                tus recetas favoritas.
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+              alt="Hamburguesa preparada"
+              loading="lazy">
+
+            <div class="product-overlay">
+              <div class="eyebrow">03 · Preparados</div>
+              <h3>Listos para disfrutar</h3>
+              <p>
+                Productos preparados para hacer más fácil
+                y delicioso el momento de compartir.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="process" id="proceso">
+      <div class="container">
+
+        <div class="process-heading">
+          <div class="eyebrow">Del origen a tu mesa</div>
+          <h2 class="section-title">
+            Cada etapa <span>cuenta.</span>
+          </h2>
+          <p class="section-text">
+            La calidad es el resultado de un proceso que requiere
+            atención, cuidado y responsabilidad.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-step">
+            <span>01</span>
+            <h3>Selección y engorda</h3>
+            <p>
+              Selección del ganado y desarrollo bajo un programa
+              de alimentación y manejo orientado a obtener
+              las características deseadas.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span>02</span>
+            <h3>Procesamiento</h3>
+            <p>
+              Sacrificio y procesamiento en instalaciones
+              autorizadas, seguido de la preparación y
+              presentación de los distintos cortes.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span>03</span>
+            <h3>Conservación y entrega</h3>
+            <p>
+              Empaque, conservación y distribución de los
+              productos bajo condiciones adecuadas de manejo
+              y temperatura.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAZABILIDAD -->
+    <section class="traceability" id="trazabilidad">
+      <div class="container">
+
+        <div class="eyebrow">Trazabilidad y confianza</div>
+
+        <h2 class="section-title">
+          Queremos que conozcas<br>
+          lo que hay detrás de <span>cada corte.</span>
+        </h2>
+
+        <p class="section-text">
+          Creemos en la importancia de ofrecer información clara
+          sobre nuestro origen, nuestra filosofía y el proceso
+          que seguimos para llevar nuestros productos hasta ti.
+        </p>
+
+        <div class="trace-points">
+          <span>Origen</span>
+          <span>Selección</span>
+          <span>Procesamiento</span>
+          <span>Conservación</span>
+          <span>Confianza</span>
+        </div>
+
+        <a href="#contacto" class="btn btn-filled">
+          Conoce Carne Cordilleras
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+      <div class="container">
+
+        <div class="eyebrow">Carne Cordilleras</div>
+
+        <h2 class="section-title">
+          Elige calidad.<br>
+          <span>Elige sabor.</span>
+        </h2>
+
+        <p class="section-text">
+          Estamos construyendo una nueva forma de disfrutar
+          la carne, con atención al origen, al proceso
+          y a cada detalle.
+        </p>
+
+        <a href="#inicio" class="btn btn-filled">
+          Volver al inicio
+        </a>
+
+        <p class="contact-note">
+          Próximamente: catálogo, pedidos y atención directa.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container footer-content">
+
+      <a class="brand" href="#inicio">
+        <svg class="brand-mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 78 L12 47 L31 27 L48 43 L65 18 L88 43 L88 78 Z"
+                stroke="currentColor" stroke-width="3"/>
+          <path d="M12 78 H88" stroke="currentColor" stroke-width="3"/>
+          <path d="M29 78 L29 58 L50 45 L71 58 L71 78"
+                stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <div>
+          <div class="brand-name">CARNE CORDILLERAS</div>
+          <div class="brand-tagline">CON SABOR A CARNE</div>
+        </div>
+      </a>
+
+      <div class="footer-copy">
+        © <span id="year"></span> Carne Cordilleras. Todos los derechos reservados.
+      </div>
+
+      <div class="footer-links">
+        <a href="#filosofia">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Menú adaptable para celulares
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Cerrar el menú después de seleccionar una sección
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Año automático en el pie de página
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
