@@ -57,4 +57,76 @@
 <section class="section trust" id="confianza"><div class="wrap"><div class="trust-box"><div><span class="eyebrow">Trazabilidad y confianza</span><h2>Queremos que conozcas lo que llevas a tu mesa.</h2><p>La confianza se construye con información clara. En esta página compartimos nuestra filosofía y la manera en que trabajamos. Conforme avancemos, incorporaremos herramientas para consultar información específica de los productos y sus lotes.</p></div><ul class="trust-list"><li>Información clara sobre nuestra propuesta.</li><li>Atención al origen y al proceso.</li><li>Compromiso con el manejo y conservación del producto.</li><li>Comunicación cercana con nuestros clientes.</li></ul></div></div></section>
 <section class="section contact" id="contacto"><div class="wrap"><span class="eyebrow">Carne Cordilleras</span><h2>Elige sabor.<br><span style="color:var(--gold)">Con sabor a carne.</span></h2><p>Estamos preparando cada detalle para acercarte una propuesta de carne de calidad. Muy pronto podrás consultar nuestro catálogo y realizar tus pedidos desde este espacio.</p><a class="btn primary" href="#productos">Conoce nuestros cortes</a><div class="contact-note">Chihuahua, Chihuahua · México</div></div></section></main>
 <footer><div class="wrap"><div class="footbrand">CARNE <span>CORDILLERAS</span></div><div class="footlinks"><a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="#proceso">Proceso</a><a href="#contacto">Contacto</a></div><p>CON SABOR A CARNE · CALIDAD · ORIGEN · CONFIANZA</p><p>© <span id="year"></span> Carne Cordilleras. Todos los derechos reservados.</p></div></footer><a class="mobile-cta" href="#productos">DESCUBRE NUESTROS CORTES</a>
-<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));</script></body></html>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));</script>
+
+<style>
+#productos .wrap {max-width:1180px;margin:auto;padding:55px 22px}
+#productos .section-head{text-align:center;margin-bottom:38px}
+#productos .eyebrow{color:#D4AF37;letter-spacing:3px;text-transform:uppercase}
+#productos h2{color:#F5F2E9;font-family:Georgia,serif;font-size:38px;margin:12px 0}
+#productos .catalog-group{margin:42px 0}
+#productos .catalog-title{color:#D4AF37;font-family:Georgia,serif;font-size:27px;border-bottom:1px solid #8b7130;padding-bottom:12px;margin-bottom:22px}
+#productos .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+#productos .catalog-card{background:#171717;border:1px solid #393329;border-radius:8px;overflow:hidden;transition:transform .25s}
+#productos .catalog-card:hover{transform:translateY(-5px);border-color:#D4AF37}
+#productos .catalog-card img{width:100%;height:190px;object-fit:cover;display:block}
+#productos .catalog-info{padding:15px}
+#productos .catalog-info h4{color:#F5F2E9;font-size:18px;margin:0}
+#productos .catalog-info span{display:block;color:#D4AF37;font-size:11px;letter-spacing:1.5px;margin-top:7px;text-transform:uppercase}
+@media(max-width:850px){#productos .catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){#productos .catalog-grid{gap:12px}#productos .catalog-card img{height:135px}#productos .catalog-info{padding:11px}#productos .catalog-info h4{font-size:15px}}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const catalogo=document.querySelector('#productos');
+ if(!catalogo)return;
+
+ const grupos=[
+  {nombre:'Parrilla',productos:[
+   ['Ribeye','ribeye.webp'],['New York','new-york.webp'],
+   ['Sirloin','sirloin.webp'],['Picaña','pica-a.webp'],
+   ['T-Bone','t-bone.webp'],['Arrachera','arrachera.webp'],
+   ['Aguja norteña','aguja-norte-a.webp'],['Costilla cargada','costilla-cargada.webp']
+  ]},
+  {nombre:'Cocina',productos:[
+   ['Bistec','bistec.webp'],['Diezmillo','diezmillo.webp'],
+   ['Fajitas','fajitas.webp'],['Carne molida','carne-molida.webp'],
+   ['Carne seca','carne-seca.webp']
+  ]},
+  {nombre:'Preparados',productos:[
+   ['Hamburguesas','hamburguesas.webp'],
+   ['Barbacoa','barbacoa.webp'],
+   ['Carne deshebrada','carne-deshebrada.webp'],
+   ['Carne para deshebrar','carne-para-deshebrar.webp']
+  ]}
+ ];
+
+ catalogo.innerHTML=`
+ <div class="wrap">
+  <div class="section-head">
+   <span class="eyebrow">Carne Cordilleras</span>
+   <h2>Nuestros productos</h2>
+   <p>Cortes y preparaciones para disfrutar el verdadero sabor de la carne.</p>
+  </div>
+  ${grupos.map(grupo=>`
+   <div class="catalog-group">
+    <h3 class="catalog-title">${grupo.nombre}</h3>
+    <div class="catalog-grid">
+     ${grupo.productos.map(p=>`
+      <article class="catalog-card">
+       <img src="./${p[1]}" alt="${p[0]}" loading="lazy">
+       <div class="catalog-info">
+        <h4>${p[0]}</h4>
+        <span>${grupo.nombre}</span>
+       </div>
+      </article>
+     `).join('')}
+    </div>
+   </div>
+  `).join('')}
+ </div>`;
+});
+</script>
+
+</body></html>
