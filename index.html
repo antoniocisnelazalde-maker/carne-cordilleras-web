@@ -83,24 +83,30 @@ document.addEventListener('DOMContentLoaded',function(){
  if(!catalogo)return;
 
  const grupos=[
-  {nombre:'Parrilla',productos:[
-   ['Ribeye','ribeye.webp'],['New York','new-york.webp'],
-   ['Sirloin','sirloin.webp'],['Picaña','pica-a.webp'],
-   ['T-Bone','t-bone.webp'],['Arrachera','arrachera.webp'],
-   ['Aguja norteña','aguja-norte-a.webp'],['Costilla cargada','costilla-cargada.webp']
-  ]},
-  {nombre:'Cocina',productos:[
-   ['Bistec','bistec.webp'],['Diezmillo','diezmillo.webp'],
-   ['Fajitas','fajitas.webp'],['Carne molida','carne-molida.webp'],
-   ['Carne seca','carne-seca.webp']
-  ]},
-  {nombre:'Preparados',productos:[
-   ['Hamburguesas','hamburguesas.webp'],
-   ['Barbacoa','barbacoa.webp'],
-   ['Carne deshebrada','carne-deshebrada.webp'],
-   ['Carne para deshebrar','carne-para-deshebrar.webp']
-  ]}
- ];
+ {nombre:'Parrilla',productos:[
+  ['Ribeye','ribeye.webp'],
+  ['New York','new-york.webp'],
+  ['Sirloin','sirloin.webp'],
+  ['Picaña','pica-a-limpia.png.png'],
+  ['T-Bone','t-bone.webp'],
+  ['Arrachera','arrachera.webp'],
+  ['Diezmillo','diezmillo-limpio.png.png'],
+  ['Aguja norteña','aguja-norte-a.webp'],
+  ['Costilla cargada','costilla-cargada.webp']
+ ]},
+ {nombre:'Cocina',productos:[
+  ['Bistec','bistec.webp'],
+  ['Fajitas','fajitas.webp'],
+  ['Carne molida','carne-molida.webp'],
+  ['Carne para deshebrar','carne-para-deshebrar.webp']
+ ]},
+ {nombre:'Preparados',productos:[
+  ['Hamburguesas','hamburguesas.webp'],
+  ['Barbacoa','barbacoa.webp'],
+  ['Carne deshebrada','carne-deshebrada.webp'],
+  ['Carne seca','carne-seca.webp']
+ ]}
+];
 
  catalogo.innerHTML=`
  <div class="wrap">
