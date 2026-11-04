@@ -255,6 +255,72 @@ header .brand img {
 }
 
 
+
+/* AJUSTE FINAL DE COMPOSICION DE PORTADA */
+
+.hero {
+  min-height: 570px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #080808 !important;
+  background-image:
+    linear-gradient(to right, #080808 0%, #080808 47%, transparent 47%),
+    url('./carne_cordilleras_hero.jpg') !important;
+  background-size: 100% 100%, 53% 100% !important;
+  background-position: center, right center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+}
+
+.hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.hero .wrap.hero-content {
+  width: 47% !important;
+  max-width: 680px !important;
+  margin: 0 !important;
+  padding: 65px 35px 65px max(45px, calc((100vw - 1450px) / 2)) !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 4vw, 62px) !important;
+  line-height: 1.12 !important;
+}
+
+.hero p {
+  max-width: 500px !important;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto !important;
+    background-image: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero .wrap.hero-content {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 50px 25px !important;
+  }
+
+  .hero::after {
+    display: block !important;
+    content: "" !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;
+    background-image: url('./carne_cordilleras_hero.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
 </style>
 
 <script>
