@@ -394,7 +394,23 @@ header .brand img {
     order: 2;
   }
 }
-</style>
+/* CORRECCION DEFINITIVA DE FOTOGRAFIA */
+@media (min-width: 761px) {
+  .hero::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 58% !important;
+    height: 100% !important;
+    background-image: url("./carne_cordilleras_hero.jpg") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    z-index: 0 !important;
+  }
+}</style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const logo = document.querySelector('header .brand img');
