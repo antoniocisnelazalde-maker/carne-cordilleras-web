@@ -135,4 +135,53 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 
+
+<style>
+/* ENCABEZADO CON LOGOTIPO HORIZONTAL */
+header .nav {
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+header .brand img {
+  width: 430px !important;
+  max-width: 40vw;
+  height: auto !important;
+  max-height: 105px !important;
+  object-fit: contain;
+}
+
+@media (max-width: 620px) {
+  header .nav {
+    min-height: 90px;
+    gap: 12px;
+  }
+
+  header .brand img {
+    width: 250px !important;
+    max-width: 65vw;
+    max-height: 70px !important;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.querySelector('header .brand img');
+  if (logo) {
+    logo.src = './carne-cordilleras-logo-horizontal.jpg';
+    logo.alt = 'Carne Cordilleras - Con sabor a carne';
+  }
+});
+</script>
+
 </body></html>
